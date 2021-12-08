@@ -1,5 +1,4 @@
 .vscode
 config
 dist
-__pycache__
-ui/resource/__pycache__
+**/__pycache__/**
