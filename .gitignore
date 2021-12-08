@@ -1,2 +1,5 @@
-ui/resource/__pycache__/resource.cpython-39.pyc
 .vscode
+config
+dist
+__pycache__
+ui/resource/__pycache__/resource.cpython-39.pyc
