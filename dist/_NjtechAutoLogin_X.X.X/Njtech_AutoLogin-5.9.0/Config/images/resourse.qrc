@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="背景">
+    <file>bground.jpeg</file>
+  </qresource>
+  <qresource prefix="打赏">
+    <file>WechatPay.png</file>
+    <file>AliPay.jpg</file>
+  </qresource>
+</RCC>
