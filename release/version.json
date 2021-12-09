@@ -1,12 +1,5 @@
-{
-    "android": [
-        { "version": "1.2.2" , "versionCode": 123}, 
-        { "version": "1.1.0" , "versionCode": 110}, 
-        { "version": "1.0.0" , "versionCode": 100}
-    ],
-    "windows": [
-        { "version": "6.1.5" , "versionCode": 615}, 
-        { "version": "4.0.0" , "versionCode": 400}, 
-        { "version": "1.0.0" , "versionCode": 100}
-    ]
-}
+[
+    { "version": "1.2.3" , "versionCode": 123}, 
+    { "version": "1.1.0" , "versionCode": 110}, 
+    { "version": "1.0.0" , "versionCode": 100}
+]
