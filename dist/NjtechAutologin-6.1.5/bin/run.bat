@@ -1,1 +1,0 @@
-start /d "bin\" NjtechAutologin.exe
