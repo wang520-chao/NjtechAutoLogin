@@ -5,7 +5,7 @@
 
 > [官网下载地址][1]&emsp;&emsp;[CSDN项目地址][2]&emsp;&emsp;[联系及反馈][3]  
 
-[官网主页示图][4]
+![官网主页示图](https://github.com/AlpHerk/NjtechAutoLogin/blob/WebPage/image/homepage.jpg)
 
 
 目前本项目共有以下3个源码分支:  
