@@ -32,4 +32,4 @@
 [1]: https://alpherk.github.io/NjtechAutoLogin/
 [2]: https://blog.csdn.net/Alpherkin/article/details/120580798
 [3]: https://blog.csdn.net/Alpherkin
-[4]: /image/homepage.jpg
+[4]: https://github.com/AlpHerk/NjtechAutoLogin/tree/WebPage/image/homepage.jpg
