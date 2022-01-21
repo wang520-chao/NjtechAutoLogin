@@ -103,12 +103,12 @@ class WinLogin(QWidget):
             self.ui.ckbx_showlogin.setChecked(False)
 
     def jumpFeedBack(self):
-        WinController.mainWdo = WdoMain()
-        WinController.mainWdo.show()
+        WinController.mainWin = WinMain()
+        WinController.mainWin.show()
 
     def jumpGiveReward(self):
-        WinController.mainWdo = GiveReward()
-        WinController.mainWdo.show()
+        WinController.mainWin = GiveReward()
+        WinController.mainWin.show()
         
     @staticmethod
     def jumpGetUpgrade():
@@ -116,10 +116,10 @@ class WinLogin(QWidget):
         open_new_tab(upgrade_url)
 
 
-class WdoMain(QMainWindow):
+class WinMain(QMainWindow):
 
     def __init__(self):
-        super(WdoMain, self).__init__()
+        super(WinMain, self).__init__()
         self.ui = MainUI.Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.btn_csdn.clicked.connect(WinLogin.jumpGetUpgrade)
@@ -136,15 +136,15 @@ class GiveReward(QMainWindow):
 
 class WinController:
 
-    loginWdo = None
-    mainWdo  = None
+    loginWin = None
+    mainWin  = None
 
 
 if __name__ == '__main__':
 
     app = QApplication(sys.argv)
-    WinController.loginWdo = WinLogin()
-    WinController.loginWdo.show()
+    WinController.loginWin = WinLogin()
+    WinController.loginWin.show()
     sys.exit(app.exec_())
 
 
