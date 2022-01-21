@@ -7,22 +7,23 @@ import win32con
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 from build import LoginUI, MainUI, RewardUI, resource
 from lib.utils import *
-class WdoLogin(QWidget):
+
+class WinLogin(QWidget):
 
     def __init__(self):
 
-        super(WdoLogin, self).__init__()
+        super(WinLogin, self).__init__()
         self.ui = LoginUI.Ui_Form()
         self.ui.setupUi(self)
         try: self.loadLoginData()
         except: pass
 
-        # 设置登录配置事件
+        # 登录信息配置事件
         self.ui.ckbx_pwrboot.stateChanged.connect(self.powerBoot)
         self.ui.ckbx_showlogin.stateChanged.connect(self.showLoginInfo)
         self.ui.spbox_cnct_time.valueChanged.connect(self.btnLink)
 
-        # 点击登录按钮事件
+        # 登录按钮点击事件
         self.ui.btn_login.clicked.connect(self.saveLoginData)
         self.ui.ed_pwd.returnPressed.connect(self.saveLoginData)
 
@@ -30,7 +31,6 @@ class WdoLogin(QWidget):
         self.ui.btn_feedback.clicked.connect(self.jumpFeedBack)
         self.ui.btn_upgrade.clicked.connect(self.jumpGetUpgrade)
         self.ui.btn_givereward.clicked.connect(self.jumpGiveReward)
-
 
     def saveLoginData(self):
 
@@ -56,7 +56,6 @@ class WdoLogin(QWidget):
         with open(LoginFile_Path, 'w', encoding='utf-8') as configfile:
             config.write(configfile)
 
-
     def loadLoginData(self):
         self.config = ConfigParser()
         self.config.read(LoginFile_Path, encoding='utf-8')
@@ -81,12 +80,10 @@ class WdoLogin(QWidget):
 
         self.powerBoot()
 
-
     def showLoginInfo(self):
         if self.ui.ckbx_showlogin.isChecked():
             # 屏蔽复选框点击事件 21.10.04
             pass
-
 
     def powerBoot(self):
         path = getcwd() + f"\\{AutoLogin_EXE}"
@@ -100,22 +97,19 @@ class WdoLogin(QWidget):
             except: pass
         win32api.RegCloseKey(hKey)
 
-
     def btnLink(self):
         if int(self.ui.spbox_cnct_time.value()) > -1:
             self.ui.ckbx_pwrboot.setChecked(True)
             self.ui.ckbx_showlogin.setChecked(False)
 
-
     def jumpFeedBack(self):
-        WdoController.mainWdo = WdoMain()
-        WdoController.mainWdo.show()
-
+        WinController.mainWdo = WdoMain()
+        WinController.mainWdo.show()
 
     def jumpGiveReward(self):
-        WdoController.mainWdo = GiveReward()
-        WdoController.mainWdo.show()
-
+        WinController.mainWdo = GiveReward()
+        WinController.mainWdo.show()
+        
     @staticmethod
     def jumpGetUpgrade():
         upgrade_url = CSDN_PROJECT_URL
@@ -123,30 +117,34 @@ class WdoLogin(QWidget):
 
 
 class WdoMain(QMainWindow):
+
     def __init__(self):
         super(WdoMain, self).__init__()
         self.ui = MainUI.Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.btn_csdn.clicked.connect(WdoLogin.jumpGetUpgrade)
+        self.ui.btn_csdn.clicked.connect(WinLogin.jumpGetUpgrade)
 
 
 class GiveReward(QMainWindow):
+
     def __init__(self):
         super(GiveReward, self).__init__()
         self.ui = RewardUI.Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.btn_csdn.clicked.connect(WdoLogin.jumpGetUpgrade)
+        self.ui.btn_csdn.clicked.connect(WinLogin.jumpGetUpgrade)
 
 
-class WdoController:
+class WinController:
+
     loginWdo = None
     mainWdo  = None
 
 
 if __name__ == '__main__':
+
     app = QApplication(sys.argv)
-    WdoController.loginWdo = WdoLogin()
-    WdoController.loginWdo.show()
+    WinController.loginWdo = WinLogin()
+    WinController.loginWdo.show()
     sys.exit(app.exec_())
 
 
