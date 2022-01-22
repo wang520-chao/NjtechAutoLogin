@@ -8,6 +8,7 @@
     <file>contact/WechatPay.png</file>
   </qresource>
   <qresource prefix="应用图标">
+    <file>com-icon/download.png</file>
     <file>njtech-icon/NJtech02.ico</file>
   </qresource>
   <qresource prefix="组件元素">

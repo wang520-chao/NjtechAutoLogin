@@ -1,8 +1,12 @@
-from os import getcwd, makedirs, remove, path
-from subprocess import call
 from time import sleep
-from .constants import *
+from subprocess import call
 from traceback import print_exc
+from webbrowser import open_new_tab
+from os import getcwd, makedirs, remove, path
+from lib.constants import *
+
+def jumpMyCSDN():
+    open_new_tab(CSDN_PROJECT_URL)
 
 
 def mkConfigDir():
@@ -48,4 +52,4 @@ def failConnectTost():
         print('\n\n  >>>【多次连接失败, 请确认】：                      '  );sleep(0.5)
         print('\n  >>> 1.电脑已连接 WiFi (建议 Njtech-home 勾选自动连接)'  );sleep(0.5)
         print('\n  >>> 2.学号密码正正确，查看目录 Config\config_info.ini'  );sleep(0.5)
-        print('\n  >>> 3.以上方法无法解决请联系 QQ 搜索: Herkines\n')       ;sleep(600)
+        print('\n  >>> 3.以上方法无法解决请联系 CSDN: AlpHerkin\n'        );sleep(600)

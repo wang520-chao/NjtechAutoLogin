@@ -1,14 +1,16 @@
 import sys
 from configparser import ConfigParser
 from os import getcwd
-from webbrowser import open_new_tab
 import win32api
 import win32con
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
-from build import LoginUI, MainUI, RewardUI, resource
+from PyQt5.QtWidgets import QApplication, QWidget
+from wdo import LoginUI, resource
+from wdo.WdoAboutLogin import *
 from lib.utils import *
 
+
 class WinLogin(QWidget):
+    """ 登录界面·入口界面 """
 
     def __init__(self):
 
@@ -43,8 +45,10 @@ class WinLogin(QWidget):
 
         mkConfigDir()   # 创建若不存在
         config = ConfigParser()
-        config[LOGIN_DATA_WARN1] = {}
-        config[LOGIN_DATA_WARN2] = {}
+        config[LOGIN_DATA_WARN1] = {
+        }
+        config[LOGIN_DATA_WARN2] = {
+        }
         config[LOGIN_PART_1] = {
             LOGIN_DATA_1: self.username,
             LOGIN_DATA_2: self.password,
@@ -86,14 +90,14 @@ class WinLogin(QWidget):
             pass
 
     def powerBoot(self):
-        path = getcwd() + f"\\{AutoLogin_EXE}"
+        path = getcwd() + f"\\{AUTOLOGIN_EXE}"
         runpath = "Software\\Microsoft\\Windows\\CurrentVersion\\Run"
         hKey = win32api.RegOpenKeyEx(win32con.HKEY_CURRENT_USER, runpath, 0, win32con.KEY_ALL_ACCESS)
 
         if self.ui.ckbx_pwrboot.isChecked():
-            win32api.RegSetValueEx(hKey, AutoLogin_EXE, 0, win32con.REG_SZ, path)
+            win32api.RegSetValueEx(hKey, AUTOLOGIN_EXE, 0, win32con.REG_SZ, path)
         else:
-            try: win32api.RegDeleteValue(hKey, AutoLogin_EXE)
+            try: win32api.RegDeleteValue(hKey, AUTOLOGIN_EXE)
             except: pass
         win32api.RegCloseKey(hKey)
 
@@ -103,40 +107,22 @@ class WinLogin(QWidget):
             self.ui.ckbx_showlogin.setChecked(False)
 
     def jumpFeedBack(self):
-        WinController.mainWin = WinMain()
+        WinController.mainWin = WinFeedback()
         WinController.mainWin.show()
 
     def jumpGiveReward(self):
-        WinController.mainWin = GiveReward()
+        WinController.mainWin = WinGiveReward()
         WinController.mainWin.show()
         
-    @staticmethod
-    def jumpGetUpgrade():
-        upgrade_url = CSDN_PROJECT_URL
-        open_new_tab(upgrade_url)
-
-
-class WinMain(QMainWindow):
-
-    def __init__(self):
-        super(WinMain, self).__init__()
-        self.ui = MainUI.Ui_MainWindow()
-        self.ui.setupUi(self)
-        self.ui.btn_csdn.clicked.connect(WinLogin.jumpGetUpgrade)
-
-
-class GiveReward(QMainWindow):
-
-    def __init__(self):
-        super(GiveReward, self).__init__()
-        self.ui = RewardUI.Ui_MainWindow()
-        self.ui.setupUi(self)
-        self.ui.btn_csdn.clicked.connect(WinLogin.jumpGetUpgrade)
+    def jumpGetUpgrade(self):
+        WinController.mainWin = WinUpdateDialog()
+        WinController.mainWin.show()
 
 
 class WinController:
 
     loginWin = None
+
     mainWin  = None
 
 
