@@ -1,7 +1,6 @@
-from window.win_login import WinLogin, WinLoginControl
 import sys
 from PyQt5.QtWidgets import QApplication
-
+from window.win_login import WinLogin, WinLoginControl
 
 if __name__ == '__main__':
 
@@ -9,5 +8,3 @@ if __name__ == '__main__':
     WinLoginControl.loginWin = WinLogin()
     WinLoginControl.loginWin.show()
     sys.exit(app.exec_())
-
-
