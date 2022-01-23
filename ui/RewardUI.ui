@@ -26,8 +26,8 @@
    <string>开发者 - 无白</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resource/resource.qrc">
-    <normaloff>:/应用图标/njtech-icon/NJtech02.ico</normaloff>:/应用图标/njtech-icon/NJtech02.ico</iconset>
+   <iconset resource="resource.qrc">
+    <normaloff>:/应用图标/icons/NJtech02.ico</normaloff>:/应用图标/icons/NJtech02.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget{
@@ -78,7 +78,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="resource/resource.qrc">:/联系方式/contact/AliPay.jpg</pixmap>
+     <pixmap resource="resource.qrc">:/联系方式/contact/AliPay.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -97,7 +97,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="resource/resource.qrc">:/联系方式/contact/WechatPay.png</pixmap>
+     <pixmap resource="resource.qrc">:/联系方式/contact/WechatPay.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -173,7 +173,8 @@ color: rgba(0, 85, 255, 120);
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="resource/resource.qrc"/>
+  <include location="resource.qrc"/>
+  <include location="resource.qrc"/>
  </resources>
  <connections/>
 </ui>

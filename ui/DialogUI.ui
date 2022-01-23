@@ -17,7 +17,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>检查更新</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/应用图标/icons/NJtech02.ico</normaloff>:/应用图标/icons/NJtech02.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QPushButton{
@@ -89,7 +93,7 @@ QPushButton:pressed
         </property>
         <property name="font">
          <font>
-          <family>Microsoft YaHei UI</family>
+          <family>Microsoft YaHei</family>
           <pointsize>11</pointsize>
          </font>
         </property>
@@ -191,7 +195,7 @@ QPushButton:pressed
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource/resource.qrc">:/应用图标/com-icon/download.png</pixmap>
+       <pixmap>:/应用图标/com-icon/download.png</pixmap>
       </property>
      </widget>
     </item>
@@ -226,6 +230,7 @@ QPushButton:pressed
   <zorder>widget</zorder>
  </widget>
  <resources>
+  <include location="resource.qrc"/>
   <include location="resource/resource.qrc"/>
  </resources>
  <connections>

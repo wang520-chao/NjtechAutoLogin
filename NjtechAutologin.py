@@ -4,7 +4,7 @@ from os import getcwd
 import win32api
 import win32con
 from PyQt5.QtWidgets import QApplication, QWidget
-from wdo import LoginUI, resource
+from wdo import LoginUI, resource_rc
 from wdo.WdoAboutLogin import *
 from lib.utils import *
 

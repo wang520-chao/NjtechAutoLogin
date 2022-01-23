@@ -4,9 +4,14 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "pyuic",
             "type": "shell",
-            "command": "echo Hello"
+            "command": "pyuic5 ${fileDirname}\\${fileBasename} -o ${workspaceFolder}\\wdo\\${fileBasenameNoExtension}.py"
+        },
+        {
+            "label": "pyrcc",
+            "type": "shell",
+            "command": "pyrcc5 ${fileDirname}\\${fileBasename} -o ${workspaceFolder}\\wdo\\${fileBasenameNoExtension}_rc.py",
         }
     ]
 }

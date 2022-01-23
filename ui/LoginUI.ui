@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -29,8 +32,8 @@
    <string>南工大自动认证</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resource/resource.qrc">
-    <normaloff>:/应用图标/njtech-icon/NJtech02.ico</normaloff>:/应用图标/njtech-icon/NJtech02.ico</iconset>
+   <iconset resource="resource.qrc">
+    <normaloff>:/应用图标/icons/NJtech02.ico</normaloff>:/应用图标/icons/NJtech02.ico</iconset>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
@@ -376,7 +379,7 @@ border:1px solid rgb(200, 200, 200);
 border-radius:4px;
 }
 QComboBox::down-arrow {
-image: url(:/组件元素/compon/arrow_down.png);
+image: url(:/组件元素/components/arrow_down.png);
 width: 10px;
 }
 QComboBox::drop-down {
@@ -488,14 +491,14 @@ border-radius:4px;
 }
 
 QSpinBox::up-button {
-border-image:url(:/组件元素/compon/arrow_up.png);
+border-image:url(:/组件元素/components/arrow_up.png);
 margin-right:3px;
 margin-top:1px;
 width: 10px;
 height: 10px;
 }
 QSpinBox::down-button {
-border-image:url(:/组件元素/compon/arrow_down.png);
+border-image:url(:/组件元素/components/arrow_down.png);
 margin-right:3px;
 margin-top:1px;
 width: 10px;
@@ -949,7 +952,7 @@ QPushButton:pressed
   <tabstop>btn_upgrade</tabstop>
  </tabstops>
  <resources>
-  <include location="resource/resource.qrc"/>
+  <include location="resource.qrc"/>
  </resources>
  <connections>
   <connection>

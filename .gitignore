@@ -1,4 +1,5 @@
 config
 dist
-ui
+ui/
+*.ui
 **/__pycache__/**

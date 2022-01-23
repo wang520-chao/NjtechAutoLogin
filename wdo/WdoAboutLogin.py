@@ -4,8 +4,8 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog
 from lib.update  import *
 from lib.utils import *
-from lib.constants import DOWN_URL, SOFT_ZIP, VERSION_CODE, VERSION_NAME
-from wdo import FeedbackUI, RewardUI, DialogUI, resource
+from lib.constants import DOWN_URL, SOFT_ZIP
+from wdo import FeedbackUI, RewardUI, DialogUI
 
 
 class WinFeedback(QMainWindow):
