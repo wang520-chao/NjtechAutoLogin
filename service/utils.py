@@ -3,14 +3,14 @@ from subprocess import call
 from traceback import print_exc
 from webbrowser import open_new_tab
 from os import getcwd, makedirs, remove, path
-from lib.constants import *
+from constants import CSDN_PROJECT_URL, LOGINFILE_DIR, LOGINFILE_PATH, WORK_LOG_PATH
 
 def jumpMyCSDN():
     open_new_tab(CSDN_PROJECT_URL)
 
 
 def mkConfigDir():
-    folder = getcwd() + LoginFile_Dir
+    folder = getcwd() + LOGINFILE_DIR
     if not path.exists(folder):
         makedirs(folder)
         return "配置文件夹创建成功"
@@ -19,7 +19,7 @@ def mkConfigDir():
 
 
 def mvConfigFile():
-    file = getcwd() + LoginFile_Path
+    file = getcwd() + LOGINFILE_PATH
     if path.exists(file):
         remove(file)
         return "已删除错误配置文件"
@@ -28,7 +28,7 @@ def mvConfigFile():
 
 
 def saveLogFile():
-    log_path = getcwd() + Work_Log_Path
+    log_path = getcwd() + WORK_LOG_PATH
     print_exc(file = open(log_path,'w+'))
     return "日志保存成功"
 

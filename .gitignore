@@ -1,5 +1,5 @@
 config
 dist
-ui
+pyqtui
 
 **/__pycache__/**

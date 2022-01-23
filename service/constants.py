@@ -2,11 +2,11 @@
 
 
 ### 用户登录文件的配置属性
-LoginFile_NoEx = "login_data"
-LoginFile_Name = "login_data.ini"
-LoginFile_Dir  = "./config"
-LoginFile_Path = "./config/login_data.ini"
-Work_Log_Path  = "./_运行错误！请发送日志给开发者.txt"
+LOGINFILE_NOEX = "login_data"
+LOGINFILE_NAME = "login_data.ini"
+LOGINFILE_DIR  = "./config"
+LOGINFILE_PATH = "./config/login_data.ini"
+WORK_LOG_PATH  = "./_运行错误！请发送日志给开发者.txt"
 
 
 ### LoginFile_Name: login_data.ini 数据名称块

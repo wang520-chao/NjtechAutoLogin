@@ -1,12 +1,14 @@
-from threading import Thread
 from configparser import ConfigParser
 from os.path import dirname, realpath
 from re import search
 from sys import argv
+from threading import Thread
 from time import sleep, time
-from requests import get, post
-from lib.utils import *
 
+from requests import get, post
+
+from service import utils
+from service.constants import *
 
 ################## 南工大自动登录 ####################
 
@@ -14,12 +16,12 @@ class AutoLogin:
 
     def __init__(self):
         try: self.getLoginData()
-        except: saveLogFile()
+        except: utils.saveLogFile()
 
     def getLoginData(self):
         self.info = {}
         self.config = ConfigParser()
-        self.config.read(dirname(realpath(argv[0])) + LoginFile_Path, encoding='utf-8')
+        self.config.read(dirname(realpath(argv[0])) + LOGINFILE_PATH, encoding='utf-8')
         self.info['cnt'] = int(self.config[LOGIN_PART_2][LOGIN_DATA_5].strip())
         self.info['usr'] = self.config[LOGIN_PART_1][LOGIN_DATA_1].strip()
         self.info['pwd'] = self.config[LOGIN_PART_1][LOGIN_DATA_2].strip()
@@ -63,17 +65,17 @@ class AutoLogin:
     def toConnect(self):
         threads = []
         threads.append(Thread(target=self.requestLogin))
-        threads.append(Thread(target=connectionProcessBar))
+        threads.append(Thread(target=utils.connectionProcessBar))
         for t in threads: t.start()
         for t in threads: t.join()
 
     def reConnect(self):
         for i in range(11):
-            if internetIsConnected(): break
+            if utils.internetIsConnected(): break
             else:
                 print('\r\t＞﹏＜ 出错啦 ~ 正在拼命重连中 ~   第{0}次重连 ~ '.format(i+1))
                 self.toConnect()
-            if i == 11: failConnectTost()
+            if i == 11: utils.failConnectTost()
 
     def intervalConnect(self):
         while self.info['cnt'] > -1:
@@ -95,7 +97,7 @@ if __name__ == '__main__':
 
     end = time()
 
-    sucsConnectToast(end-start)
+    utils.sucsConnectToast(end-start)
 
     login.intervalConnect()
 

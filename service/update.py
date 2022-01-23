@@ -1,6 +1,6 @@
 import json
 from PyQt5.QtCore import QThread, pyqtSignal
-from lib.constants import VERSION_CODE, VERSION_NAME
+from constants import VERSION_CODE, VERSION_NAME
 
 
 def checkUpdate():
