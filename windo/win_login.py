@@ -8,7 +8,8 @@ from PyQt5.QtWidgets import QApplication, QWidget
 
 from service import utils
 from service.constants import *
-from window import WinFeedback, WinGiveReward, WinUpdateDialog, ui_login
+from windo.win_adh_login import WinFeedback, WinGiveReward, WinUpdateDialog
+from windo.ui import ui_login
 
 
 class WinLogin(QWidget):

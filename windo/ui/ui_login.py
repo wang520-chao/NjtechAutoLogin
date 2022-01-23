@@ -480,4 +480,3 @@ class Ui_Form(object):
         self.btn_givereward.setText(_translate("Form", "打赏点赞"))
         self.btn_upgrade.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:9pt;\">请到我的博客下获取最新版，为了软件的安全可靠</span></p></body></html>"))
         self.btn_upgrade.setText(_translate("Form", "检查更新"))
-import resource_rc

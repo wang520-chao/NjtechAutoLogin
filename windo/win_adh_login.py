@@ -7,7 +7,8 @@ from service import utils
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 
-from window import ui_dialog, ui_feedback, ui_reward
+from windo.ui import ui_dialog, ui_reward
+from windo.ui import ui_feedback
 
 
 class WinFeedback(QMainWindow):
