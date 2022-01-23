@@ -4,8 +4,6 @@ pyinstaller NjtechAutologin.py -w --clean -i UI\resource\njtech-icon\NJtech02.ic
 
 pyinstaller autologin.py -w --clean -i UI\resource\njtech-icon\autologin.ico --log-level WARN --noconfirm
 
---specpath Build
-
 pyi-makespec -w xxx.py
 
 pyinstaller -D xxx.spec
@@ -52,7 +50,7 @@ pyinstaller -D xxx.spec
 - 21.10.3晚  
   软件打包遇到无图标问题，以为PS处理了icon图片产生的问题，下载图标制作软件误装全家！
 - 21.10.4早
-  全家桶弹窗，C盘大清理。无法访问外网，已忘上次处理方法，仍未知问题所在，干脆回滚系统，重装驱动。冥思苦想，删除上网认证cookies，问题解决！
+  全家桶弹窗，C盘大清理。无法访问外网，回滚系统，重装驱动。冥思苦想，删除上网认证cookies，问题解决！
 - 22.1.23早
   增加检查更新功能
 

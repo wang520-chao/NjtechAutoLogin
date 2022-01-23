@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\Aerk\Documents\PrjcDev\NjtechAutoLogin-Dev\NjtechAutoLogin-Win\ui\DialogUI.ui'
+# Form implementation generated from reading ui file 'd:\Aerk\Documents\PrjcDev\NjtechAutoLogin-Dev\NjtechAutoLogin-Win\pyqtui\ui_dialog.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -103,7 +103,7 @@ class Ui_Dialog(object):
         self.textbrow_info = QtWidgets.QTextBrowser(self.layoutWidget)
         self.textbrow_info.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
-        font.setFamily("Yu Gothic UI Light")
+        font.setFamily("Microsoft YaHei")
         font.setPointSize(11)
         self.textbrow_info.setFont(font)
         self.textbrow_info.setStyleSheet("QTextBrowser {\n"
@@ -128,4 +128,9 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "检查更新"))
         self.btn_yes.setText(_translate("Dialog", "确定"))
         self.btn_no.setText(_translate("Dialog", "取消"))
-
+        self.textbrow_info.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Microsoft YaHei\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p></body></html>"))
+import resource_rc
