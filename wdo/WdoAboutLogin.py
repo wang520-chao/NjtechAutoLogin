@@ -2,9 +2,9 @@ import sys
 from webbrowser import open_new_tab
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog
+from lib.constants import DOWN_URL, SOFT_ZIP
 from lib.update  import *
 from lib.utils import *
-from lib.constants import DOWN_URL, SOFT_ZIP
 from wdo import FeedbackUI, RewardUI, DialogUI
 
 

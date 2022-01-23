@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'DialogUI.ui'
+# Form implementation generated from reading ui file 'd:\Aerk\Documents\PrjcDev\NjtechAutoLogin-Dev\NjtechAutoLogin-Win\ui\DialogUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -16,6 +16,9 @@ class Ui_Dialog(object):
         Dialog.setObjectName("Dialog")
         Dialog.resize(700, 250)
         Dialog.setMinimumSize(QtCore.QSize(700, 250))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/应用图标/icons/NJtech02.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Dialog.setWindowIcon(icon)
         Dialog.setStyleSheet("QPushButton{\n"
 "  background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0.871, y2:0.25, stop:0.144279 rgba(102, 176, 240, 255));\n"
 "  color: rgb(255, 255, 255);\n"
@@ -54,7 +57,7 @@ class Ui_Dialog(object):
         self.btn_yes.setMinimumSize(QtCore.QSize(90, 30))
         self.btn_yes.setMaximumSize(QtCore.QSize(90, 30))
         font = QtGui.QFont()
-        font.setFamily("Microsoft YaHei UI")
+        font.setFamily("Microsoft YaHei")
         font.setPointSize(11)
         self.btn_yes.setFont(font)
         self.btn_yes.setObjectName("btn_yes")
@@ -122,6 +125,7 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "检查更新"))
         self.btn_yes.setText(_translate("Dialog", "确定"))
         self.btn_no.setText(_translate("Dialog", "取消"))
+
