@@ -14,6 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
+        Dialog.setWindowModality(QtCore.Qt.ApplicationModal)
         Dialog.resize(700, 250)
         Dialog.setMinimumSize(QtCore.QSize(700, 250))
         icon = QtGui.QIcon()
@@ -60,6 +61,7 @@ class Ui_Dialog(object):
         font.setFamily("Microsoft YaHei")
         font.setPointSize(11)
         self.btn_yes.setFont(font)
+        self.btn_yes.setStyleSheet("border:0px;")
         self.btn_yes.setObjectName("btn_yes")
         self.horizontalLayout.addWidget(self.btn_yes)
         spacerItem1 = QtWidgets.QSpacerItem(13, 17, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -76,7 +78,7 @@ class Ui_Dialog(object):
         font.setFamily("Microsoft YaHei UI")
         font.setPointSize(11)
         self.btn_no.setFont(font)
-        self.btn_no.setStyleSheet("")
+        self.btn_no.setStyleSheet("border:0px;")
         self.btn_no.setObjectName("btn_no")
         self.horizontalLayout.addWidget(self.btn_no)
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -109,6 +111,7 @@ class Ui_Dialog(object):
         self.textbrow_info.setStyleSheet("QTextBrowser {\n"
 "    background: transparent;\n"
 "    border:0px;\n"
+"    margin: 10px 10px 10px 0px;\n"
 "}")
         self.textbrow_info.setDocumentTitle("")
         self.textbrow_info.setObjectName("textbrow_info")
@@ -119,7 +122,6 @@ class Ui_Dialog(object):
         self.widget.raise_()
 
         self.retranslateUi(Dialog)
-        self.btn_yes.clicked['bool'].connect(Dialog.close) # type: ignore
         self.btn_no.clicked['bool'].connect(Dialog.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
@@ -132,5 +134,5 @@ class Ui_Dialog(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Microsoft YaHei\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p></body></html>"))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
 import resource_rc

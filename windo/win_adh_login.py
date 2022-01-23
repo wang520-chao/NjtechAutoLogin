@@ -18,6 +18,7 @@ class WinFeedback(QMainWindow):
         super(WinFeedback, self).__init__()
         self.ui = ui_feedback.Ui_MainWindow()
         self.ui.setupUi(self)
+
         self.ui.btn_csdn.clicked.connect(utils.jumpMyCSDN)
 
 
@@ -28,6 +29,7 @@ class WinGiveReward(QMainWindow):
         super(WinGiveReward, self).__init__()
         self.ui = ui_reward.Ui_MainWindow()
         self.ui.setupUi(self)
+
         self.ui.btn_csdn.clicked.connect(utils.jumpMyCSDN)
 
 
@@ -38,6 +40,7 @@ class WinUpdateDialog(QDialog):
         super(WinUpdateDialog, self).__init__()
         self.ui = ui_dialog.Ui_Dialog()
         self.ui.setupUi(self)
+        
         self.setWindowFlags(Qt.WindowStaysOnTopHint) #置顶窗口
         self.checkUpdate()
 
