@@ -9,10 +9,10 @@ from PyQt5.QtWidgets import QApplication, QWidget
 from service import utils
 from service.constants import *
 from windo.win_adh_login import WinFeedback, WinGiveReward, WinUpdateDialog
-from windo.ui import ui_login
+from windo.ui_init import ui_login
+from windo.ui_patch.drag_widget import DragWidget
 
-
-class WinLogin(QWidget):
+class WinLogin(DragWidget):
     """ 登录界面·入口界面 """
 
     def __init__(self):
