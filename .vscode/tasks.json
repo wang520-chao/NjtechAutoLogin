@@ -6,12 +6,12 @@
         {
             "label": "pyuic",
             "type": "shell",
-            "command": "pyuic5 ${file} -o ${workspaceFolder}\\windo\\ui\\${fileBasenameNoExtension}.py"
+            "command": "pyuic5 ${file} -o ${workspaceFolder}\\windo\\ui_init\\${fileBasenameNoExtension}.py"
         },
         {
             "label": "pyrcc",
             "type": "shell",
-            "command": "pyrcc5 ${file} -o ${workspaceFolder}\\windo\\ui\\${fileBasenameNoExtension}_rc.py",
+            "command": "pyrcc5 ${file} -o ${workspaceFolder}\\windo\\ui_init\\${fileBasenameNoExtension}_rc.py",
         }
     ]
 }

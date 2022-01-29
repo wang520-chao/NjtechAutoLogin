@@ -39,8 +39,8 @@ class WinUpdateDialog(QDialog):
     def __init__(self) -> None:
         super(WinUpdateDialog, self).__init__()
         self.ui = ui_dialog.Ui_Dialog()
-        self.ui.setupUi(self)
-        
+        self.ui.setupUi(self) 
+        # self.setWindowState(Qt.WindowActive)
         self.setWindowFlags(Qt.WindowStaysOnTopHint) #置顶窗口
         self.checkUpdate()
 
@@ -58,6 +58,7 @@ class WinUpdateDialog(QDialog):
         if   yes_btn == "确定":
             self.ui.btn_yes.clicked.connect(self.close)
         elif yes_btn == "下载":
+            self.ui.btn_yes.setDefault(True) # FIXME
             self.ui.btn_yes.clicked.connect(self.downSoft)
 
     def downSoft(self):
@@ -67,6 +68,7 @@ class WinUpdateDialog(QDialog):
         self.ui.btn_yes.clicked.connect(self.close)
         self.ui.btn_yes.clicked.disconnect(self.downSoft)
         self.ui.btn_yes.setText("确定")
+        self.ui.btn_yes.setDefault(True) # FIXME
         open_new_tab(DOWN_URL)
 
 

@@ -5,7 +5,7 @@ from PyQt5.QtCore import Qt
 from windo.win_login import WinLogin, WinLoginControl
 
 if __name__ == '__main__':
-    
+
     QCoreApplication.setAttribute(Qt.AA_EnableHighDpiScaling) # 缩放适应高分屏
 
     app = QApplication(sys.argv)

@@ -17,6 +17,7 @@ class Ui_Dialog(object):
         Dialog.setWindowModality(QtCore.Qt.ApplicationModal)
         Dialog.resize(700, 250)
         Dialog.setMinimumSize(QtCore.QSize(700, 250))
+        Dialog.setMaximumSize(QtCore.QSize(700, 250))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/应用图标/icons/NJtech02.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)

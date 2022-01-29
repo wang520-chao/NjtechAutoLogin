@@ -4,7 +4,7 @@ from os import getcwd
 
 import win32api
 import win32con
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import QApplication
 
 from service import utils
 from service.constants import *
@@ -20,6 +20,7 @@ class WinLogin(DragWidget):
         super(WinLogin, self).__init__()
         self.ui = ui_login.Ui_Form()
         self.ui.setupUi(self)
+        
         try: self.loadLoginData()
         except: pass
 
