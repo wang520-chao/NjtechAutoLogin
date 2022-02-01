@@ -1,4 +1,3 @@
-import sys
 from configparser import ConfigParser
 from os import getcwd
 
@@ -40,7 +39,6 @@ class WinLogin(DragWidget):
         self.ui.btn_givereward.clicked.connect(self.jumpGiveReward)
 
     def saveLoginData(self):
-
         self.username  = self.ui.ed_usr.text()
         self.password  = self.ui.ed_pwd.text()
         self.channel   = self.ui.cbbx_channel.currentText()
@@ -112,27 +110,28 @@ class WinLogin(DragWidget):
             self.ui.ckbx_showlogin.setChecked(False)
 
     def jumpFeedBack(self):
-        WinLoginControl.mainWin = WinFeedback()
-        WinLoginControl.mainWin.show()
+        WinLoginControl.showWin = WinFeedback()
+        WinLoginControl.showWin.show()
 
     def jumpGiveReward(self):
-        WinLoginControl.mainWin = WinGiveReward()
-        WinLoginControl.mainWin.show()
+        WinLoginControl.showWin = WinGiveReward()
+        WinLoginControl.showWin.show()
         
     def jumpGetUpgrade(self):
-        WinLoginControl.mainWin = WinUpdateDialog()
-        WinLoginControl.mainWin.show()
+        WinLoginControl.showWin = WinUpdateDialog()
+        WinLoginControl.showWin.show()
 
 
 class WinLoginControl:
 
     loginWin = None
 
-    mainWin  = None
+    showWin  = None
 
 
 if __name__ == '__main__':
 
+    import sys
     app = QApplication(sys.argv)
     WinLoginControl.loginWin = WinLogin()
     WinLoginControl.loginWin.show()

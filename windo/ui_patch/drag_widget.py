@@ -1,8 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-import sys
 
-from matplotlib.pyplot import close
 
 class DragWidget(QWidget):
     """ 左键拖拽窗口 """
@@ -10,7 +8,7 @@ class DragWidget(QWidget):
         super().__init__()
         self.setAttribute(Qt.WA_DeleteOnClose, True)
         
-        self.setWindowOpacity(0.98)
+        self.setWindowOpacity(0.99)
         self.initCustomUI()
         self.dragWidget()
 
@@ -22,6 +20,7 @@ class DragWidget(QWidget):
         """  """
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
+        self.setStyleSheet("background-color:red;")
 
     def mousePressEvent(self, a0):
         if a0.button() == Qt.LeftButton:
@@ -45,6 +44,8 @@ class DragWidget(QWidget):
 
 
 if __name__ == '__main__':
+    
+    import sys
     
     app = QApplication(sys.argv)
 

@@ -24,46 +24,292 @@ class Ui_Form(object):
         Form.setWindowIcon(icon)
         Form.setLayoutDirection(QtCore.Qt.LeftToRight)
         Form.setAutoFillBackground(False)
-        Form.setStyleSheet("QWidget{\n"
-"  border-radius:8px;\n"
-"  background-color: #000000;\n"
-"}\n"
-"QLineEdit{\n"
-"  border:1px solid rgb(200, 200, 200);\n"
-"  background-color: rgb(245, 245, 245);\n"
-"}\n"
-"QCheckBox{\n"
-"  background: transparent;\n"
+        Form.setStyleSheet("QWidget {\n"
+"      border-radius:8px;\n"
+"      background-color: #FFFFFF;\n"
 "}\n"
 "\n"
 "\n"
-"QToolButton{\n"
-"  background: transparent;\n"
-"  color: rgba(161, 164, 166, 255);\n"
+"QPushButton#btn_minimum:hover {\n"
+"    background-color: #ADE1FC;\n"
+"} QPushButton#btn_minimum:pressed {\n"
+"    background-color: #7FDCFF;\n"
+"    padding-top:2px; \n"
+"} QPushButton#btn_close:hover {\n"
+"    background-color: #FCADAD;\n"
+"} QPushButton#btn_close:pressed {\n"
+"    background-color: #FC6666;\n"
+"    padding-top:2px;\n"
 "}\n"
-"QToolButton:hover{\n"
-"  background: transparent;\n"
-"  color:#5846B0;\n"
-"}")
-        self.layoutWidget = QtWidgets.QWidget(Form)
-        self.layoutWidget.setGeometry(QtCore.QRect(0, 170, 521, 62))
+"\n"
+"\n"
+"QLineEdit {\n"
+"      border:1px solid rgb(200, 200, 200);\n"
+"     background-color: rgb(245, 245, 245);\n"
+"    selection-background-color: red_red;\n"
+"} QLineEdit[echoMode=\"2\"] { }\n"
+"\n"
+"\n"
+"QCheckBox {\n"
+"     background: transparent;\n"
+"      spacing:4px;\n"
+"}\n"
+"\n"
+"\n"
+"QComboBox {\n"
+"    background: #F5F5F5;\n"
+"    border:1px solid rgb(200, 200, 200);\n"
+"    border-radius:4px;\n"
+"} QComboBox::down-arrow {\n"
+"    image: url(:/组件元素/components/arrow_down.png);\n"
+"    width: 10px;\n"
+"} QComboBox::drop-down {\n"
+"     subcontrol-origin: padding;\n"
+"     subcontrol- position: top right;\n"
+"     width: 15px;\n"
+"     border-left: 1px solid darkgray;\n"
+"     border-top-right-radius: 4px; \n"
+"     border-bottom-right-radius: 4px;\n"
+"} QComboBox QAbstractItemView {\n"
+"    background: #F9F9F9;\n"
+"    border: 1px solid rgb(200, 200, 200);\n"
+"    border-radius: 4px;\n"
+"    border-bottom-left-radius: 5px;\n"
+"    font-size:20;\n"
+"    outline: 0;  \n"
+"} QComboBox QAbstractItemView::item {\n"
+"    border-radius:4px;\n"
+"    color: red;\n"
+"}\n"
+"\n"
+"\n"
+"QSpinBox {\n"
+"    background-color: #F5F5F5;\n"
+"    border:1px solid rgb(200, 200, 200);\n"
+"    border-radius:4px;\n"
+"} QSpinBox::up-button {\n"
+"    border-image:url(:/组件元素/components/arrow_up.png);\n"
+"    margin-right:3px;\n"
+"    margin-top:1px;    \n"
+"    width: 10px;\n"
+"    height: 10px;\n"
+"} QSpinBox::down-button {\n"
+"    border-image:url(:/组件元素/components/arrow_down.png);\n"
+"    margin-right:3px;\n"
+"    margin-top:1px;\n"
+"    width: 10px;\n"
+"    height: 10px;\n"
+"} QSpinBox::up-button:pressed {\n"
+"    margin-top:2px;\n"
+"} QSpinBox::down-button:pressed {\n"
+"    margin-bottom:2px;\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton#btn_login {\n"
+"  background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0.871, y2:0.25, stop:0.144279 rgba(102, 176, 240, 255));\n"
+"  color: rgb(255, 255, 255);\n"
+"} QPushButton#btn_login:hover {\n"
+"      color: rgb(255, 255, 255);\n"
+"    background-color:rgb(48, 152, 241);\n"
+"} QPushButton#btn_login:pressed {\n"
+"      color: rgb(255, 255, 255);\n"
+"    background-color:rgb(36, 146, 241);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"\n"
+"\n"
+"QToolButton {\n"
+"      background: transparent;\n"
+"      color: rgba(161, 164, 166, 255);\n"
+"} QToolButton:hover {\n"
+"      background: transparent;\n"
+"      color:#5846B0;\n"
+"}\n"
+"\n"
+"")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_5.setSpacing(0)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        self.widget = QtWidgets.QWidget(Form)
+        self.widget.setMinimumSize(QtCore.QSize(200, 32))
+        self.widget.setObjectName("widget")
+        self.layoutWidget = QtWidgets.QWidget(self.widget)
+        self.layoutWidget.setGeometry(QtCore.QRect(0, 350, 521, 31))
         self.layoutWidget.setObjectName("layoutWidget")
-        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.layoutWidget)
-        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_7.setSpacing(0)
-        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.layoutWidget)
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_7.addItem(spacerItem)
+        self.horizontalLayout_8.addItem(spacerItem)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.btn_feedback = QtWidgets.QToolButton(self.layoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_feedback.sizePolicy().hasHeightForWidth())
+        self.btn_feedback.setSizePolicy(sizePolicy)
+        self.btn_feedback.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        font.setUnderline(True)
+        self.btn_feedback.setFont(font)
+        self.btn_feedback.setStyleSheet("")
+        self.btn_feedback.setObjectName("btn_feedback")
+        self.horizontalLayout_2.addWidget(self.btn_feedback)
+        self.btn_givereward = QtWidgets.QToolButton(self.layoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_givereward.sizePolicy().hasHeightForWidth())
+        self.btn_givereward.setSizePolicy(sizePolicy)
+        self.btn_givereward.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        font.setUnderline(True)
+        self.btn_givereward.setFont(font)
+        self.btn_givereward.setStyleSheet("")
+        self.btn_givereward.setObjectName("btn_givereward")
+        self.horizontalLayout_2.addWidget(self.btn_givereward)
+        self.btn_upgrade = QtWidgets.QToolButton(self.layoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_upgrade.sizePolicy().hasHeightForWidth())
+        self.btn_upgrade.setSizePolicy(sizePolicy)
+        self.btn_upgrade.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        font.setUnderline(True)
+        self.btn_upgrade.setFont(font)
+        self.btn_upgrade.setStyleSheet("")
+        self.btn_upgrade.setObjectName("btn_upgrade")
+        self.horizontalLayout_2.addWidget(self.btn_upgrade)
+        self.horizontalLayout_8.addLayout(self.horizontalLayout_2)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_8.addItem(spacerItem1)
+        self.horizontalLayout_8.setStretch(0, 16)
+        self.horizontalLayout_8.setStretch(1, 20)
+        self.horizontalLayout_8.setStretch(2, 16)
+        self.layoutWidget1 = QtWidgets.QWidget(self.widget)
+        self.layoutWidget1.setGeometry(QtCore.QRect(1, 10, 521, 31))
+        self.layoutWidget1.setObjectName("layoutWidget1")
+        self.horizontalLayout_13 = QtWidgets.QHBoxLayout(self.layoutWidget1)
+        self.horizontalLayout_13.setContentsMargins(15, 0, 15, 0)
+        self.horizontalLayout_13.setObjectName("horizontalLayout_13")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_6.setSpacing(0)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setSpacing(0)
-        self.verticalLayout.setObjectName("verticalLayout")
+        self.label_2 = QtWidgets.QLabel(self.layoutWidget1)
+        self.label_2.setMinimumSize(QtCore.QSize(18, 18))
+        self.label_2.setMaximumSize(QtCore.QSize(18, 18))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap(":/应用图标/icons/NJtech02.ico"))
+        self.label_2.setScaledContents(True)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_6.addWidget(self.label_2)
+        self.label_3 = QtWidgets.QLabel(self.layoutWidget1)
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei UI")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_3.setFont(font)
+        self.label_3.setStyleSheet("color: #5D5B5B;")
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_6.addWidget(self.label_3)
+        self.horizontalLayout_13.addLayout(self.horizontalLayout_6)
+        spacerItem2 = QtWidgets.QSpacerItem(218, 18, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_13.addItem(spacerItem2)
+        self.horizontalLayout_12 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_12.setSizeConstraint(QtWidgets.QLayout.SetMaximumSize)
+        self.horizontalLayout_12.setSpacing(5)
+        self.horizontalLayout_12.setObjectName("horizontalLayout_12")
+        self.btn_minimum = QtWidgets.QPushButton(self.layoutWidget1)
+        self.btn_minimum.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/组件元素/components/min_zoom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_minimum.setIcon(icon1)
+        self.btn_minimum.setIconSize(QtCore.QSize(18, 18))
+        self.btn_minimum.setObjectName("btn_minimum")
+        self.horizontalLayout_12.addWidget(self.btn_minimum)
+        self.btn_close = QtWidgets.QPushButton(self.layoutWidget1)
+        self.btn_close.setText("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/组件元素/components/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_close.setIcon(icon2)
+        self.btn_close.setIconSize(QtCore.QSize(18, 18))
+        self.btn_close.setObjectName("btn_close")
+        self.horizontalLayout_12.addWidget(self.btn_close)
+        self.horizontalLayout_13.addLayout(self.horizontalLayout_12)
+        self.layoutWidget2 = QtWidgets.QWidget(self.widget)
+        self.layoutWidget2.setGeometry(QtCore.QRect(0, 80, 521, 167))
+        self.layoutWidget2.setObjectName("layoutWidget2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget2)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem3)
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_6.setSpacing(20)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        self.verticalLayout_10 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_10.setSpacing(15)
+        self.verticalLayout_10.setObjectName("verticalLayout_10")
+        self.ed_usr = QtWidgets.QLineEdit(self.layoutWidget2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.ed_usr.sizePolicy().hasHeightForWidth())
+        self.ed_usr.setSizePolicy(sizePolicy)
+        self.ed_usr.setMinimumSize(QtCore.QSize(200, 32))
+        self.ed_usr.setMaximumSize(QtCore.QSize(200, 32))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ed_usr.setFont(font)
+        self.ed_usr.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.ed_usr.setStyleSheet("")
+        self.ed_usr.setText("")
+        self.ed_usr.setMaxLength(12)
+        self.ed_usr.setAlignment(QtCore.Qt.AlignCenter)
+        self.ed_usr.setObjectName("ed_usr")
+        self.verticalLayout_10.addWidget(self.ed_usr)
+        self.ed_pwd = QtWidgets.QLineEdit(self.layoutWidget2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.ed_pwd.sizePolicy().hasHeightForWidth())
+        self.ed_pwd.setSizePolicy(sizePolicy)
+        self.ed_pwd.setMinimumSize(QtCore.QSize(200, 32))
+        self.ed_pwd.setMaximumSize(QtCore.QSize(200, 32))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ed_pwd.setFont(font)
+        self.ed_pwd.setStyleSheet("")
+        self.ed_pwd.setText("")
+        self.ed_pwd.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.ed_pwd.setAlignment(QtCore.Qt.AlignCenter)
+        self.ed_pwd.setObjectName("ed_pwd")
+        self.verticalLayout_10.addWidget(self.ed_pwd)
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setContentsMargins(2, -1, 2, -1)
+        self.horizontalLayout_5.setSpacing(0)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
         self.verticalLayout_4.setSpacing(8)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.ckbx_showlogin = QtWidgets.QCheckBox(self.layoutWidget)
+        self.ckbx_showlogin = QtWidgets.QCheckBox(self.layoutWidget2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -85,7 +331,7 @@ class Ui_Form(object):
         self.ckbx_showlogin.setTristate(False)
         self.ckbx_showlogin.setObjectName("ckbx_showlogin")
         self.verticalLayout_4.addWidget(self.ckbx_showlogin)
-        self.ckbx_pwrboot = QtWidgets.QCheckBox(self.layoutWidget)
+        self.ckbx_pwrboot = QtWidgets.QCheckBox(self.layoutWidget2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -107,17 +353,13 @@ class Ui_Form(object):
         self.ckbx_pwrboot.setTristate(False)
         self.ckbx_pwrboot.setObjectName("ckbx_pwrboot")
         self.verticalLayout_4.addWidget(self.ckbx_pwrboot)
-        self.verticalLayout.addLayout(self.verticalLayout_4)
-        self.horizontalLayout_6.addLayout(self.verticalLayout)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem1)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.horizontalLayout_5.addLayout(self.verticalLayout_4)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem4)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setSpacing(8)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.cbbx_channel = QtWidgets.QComboBox(self.layoutWidget)
+        self.cbbx_channel = QtWidgets.QComboBox(self.layoutWidget2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -133,30 +375,7 @@ class Ui_Form(object):
         self.cbbx_channel.setFocusPolicy(QtCore.Qt.WheelFocus)
         self.cbbx_channel.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.cbbx_channel.setAutoFillBackground(False)
-        self.cbbx_channel.setStyleSheet("QComboBox{\n"
-"background: #F5F5F5;\n"
-"border:1px solid rgb(200, 200, 200);\n"
-"border-radius:4px;\n"
-"}\n"
-"QComboBox::down-arrow {\n"
-"image: url(:/组件元素/components/arrow_down.png);\n"
-"width: 10px;\n"
-"}\n"
-"QComboBox::drop-down {\n"
-"     subcontrol-origin: padding;\n"
-"     subcontrol- position: top right;\n"
-"     width: 15px;\n"
-"     border-left: 1px solid darkgray;\n"
-"     border-top-right-radius: 4px; \n"
-"     border-bottom-right-radius: 4px;\n"
-"}\n"
-"\n"
-"QComboBox QAbstractItemView{\n"
-"    background: #F9F9F9;\n"
-"    border: 1px solid rgb(200, 200, 200);\n"
-"    outline: 0px;  \n"
-"}\n"
-"")
+        self.cbbx_channel.setStyleSheet("")
         self.cbbx_channel.setInsertPolicy(QtWidgets.QComboBox.InsertAtCurrent)
         self.cbbx_channel.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
         self.cbbx_channel.setDuplicatesEnabled(False)
@@ -164,17 +383,18 @@ class Ui_Form(object):
         self.cbbx_channel.addItem("")
         self.cbbx_channel.addItem("")
         self.verticalLayout_3.addWidget(self.cbbx_channel)
-        self.gridLayout = QtWidgets.QGridLayout()
-        self.gridLayout.setObjectName("gridLayout")
-        self.label = QtWidgets.QLabel(self.layoutWidget)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setSpacing(2)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.label = QtWidgets.QLabel(self.layoutWidget2)
         self.label.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei UI")
         font.setPointSize(10)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        self.spbox_cnct_time = QtWidgets.QSpinBox(self.layoutWidget)
+        self.horizontalLayout_4.addWidget(self.label)
+        self.spbox_cnct_time = QtWidgets.QSpinBox(self.layoutWidget2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -189,34 +409,7 @@ class Ui_Form(object):
         font.setKerning(False)
         self.spbox_cnct_time.setFont(font)
         self.spbox_cnct_time.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.spbox_cnct_time.setStyleSheet("QSpinBox {\n"
-"background-color: #F5F5F5;\n"
-"border:1px solid rgb(200, 200, 200);\n"
-"border-radius:4px;\n"
-"}\n"
-"\n"
-"QSpinBox::up-button {\n"
-"border-image:url(:/组件元素/components/arrow_up.png);\n"
-"margin-right:3px;\n"
-"margin-top:1px;\n"
-"width: 10px;\n"
-"height: 10px;\n"
-"}\n"
-"QSpinBox::down-button {\n"
-"border-image:url(:/组件元素/components/arrow_down.png);\n"
-"margin-right:3px;\n"
-"margin-top:1px;\n"
-"width: 10px;\n"
-"height: 10px;\n"
-"}\n"
-"\n"
-"QSpinBox::up-button:pressed {\n"
-"margin-top:2px;\n"
-"}\n"
-"QSpinBox::down-button:pressed {\n"
-"margin-bottom:2px;\n"
-"}\n"
-"")
+        self.spbox_cnct_time.setStyleSheet("")
         self.spbox_cnct_time.setWrapping(False)
         self.spbox_cnct_time.setFrame(False)
         self.spbox_cnct_time.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
@@ -231,127 +424,30 @@ class Ui_Form(object):
         self.spbox_cnct_time.setProperty("value", 5)
         self.spbox_cnct_time.setDisplayIntegerBase(10)
         self.spbox_cnct_time.setObjectName("spbox_cnct_time")
-        self.gridLayout.addWidget(self.spbox_cnct_time, 0, 1, 1, 1)
-        self.verticalLayout_3.addLayout(self.gridLayout)
-        self.verticalLayout_3.setStretch(0, 1)
+        self.horizontalLayout_4.addWidget(self.spbox_cnct_time)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_4)
         self.verticalLayout_3.setStretch(1, 1)
-        self.verticalLayout_2.addLayout(self.verticalLayout_3)
-        self.horizontalLayout_6.addLayout(self.verticalLayout_2)
-        self.horizontalLayout_6.setStretch(0, 10)
-        self.horizontalLayout_6.setStretch(1, 2)
-        self.horizontalLayout_6.setStretch(2, 6)
-        self.horizontalLayout_7.addLayout(self.horizontalLayout_6)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_7.addItem(spacerItem2)
-        self.horizontalLayout_7.setStretch(0, 16)
-        self.horizontalLayout_7.setStretch(1, 20)
-        self.horizontalLayout_7.setStretch(2, 16)
-        self.layoutWidget1 = QtWidgets.QWidget(Form)
-        self.layoutWidget1.setGeometry(QtCore.QRect(0, 340, 521, 31))
-        self.layoutWidget1.setObjectName("layoutWidget1")
-        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.layoutWidget1)
-        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
-        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_8.addItem(spacerItem3)
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.btn_feedback = QtWidgets.QToolButton(self.layoutWidget1)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.btn_feedback.sizePolicy().hasHeightForWidth())
-        self.btn_feedback.setSizePolicy(sizePolicy)
-        self.btn_feedback.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setUnderline(True)
-        self.btn_feedback.setFont(font)
-        self.btn_feedback.setStyleSheet("")
-        self.btn_feedback.setObjectName("btn_feedback")
-        self.horizontalLayout_2.addWidget(self.btn_feedback)
-        self.btn_givereward = QtWidgets.QToolButton(self.layoutWidget1)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.btn_givereward.sizePolicy().hasHeightForWidth())
-        self.btn_givereward.setSizePolicy(sizePolicy)
-        self.btn_givereward.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setUnderline(True)
-        self.btn_givereward.setFont(font)
-        self.btn_givereward.setStyleSheet("")
-        self.btn_givereward.setObjectName("btn_givereward")
-        self.horizontalLayout_2.addWidget(self.btn_givereward)
-        self.btn_upgrade = QtWidgets.QToolButton(self.layoutWidget1)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.btn_upgrade.sizePolicy().hasHeightForWidth())
-        self.btn_upgrade.setSizePolicy(sizePolicy)
-        self.btn_upgrade.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(10)
-        font.setUnderline(True)
-        self.btn_upgrade.setFont(font)
-        self.btn_upgrade.setStyleSheet("")
-        self.btn_upgrade.setObjectName("btn_upgrade")
-        self.horizontalLayout_2.addWidget(self.btn_upgrade)
-        self.horizontalLayout_8.addLayout(self.horizontalLayout_2)
-        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_8.addItem(spacerItem4)
-        self.horizontalLayout_8.setStretch(0, 20)
-        self.horizontalLayout_8.setStretch(1, 25)
-        self.horizontalLayout_8.setStretch(2, 20)
-        self.ed_usr = QtWidgets.QLineEdit(Form)
-        self.ed_usr.setGeometry(QtCore.QRect(160, 60, 200, 32))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.ed_usr.sizePolicy().hasHeightForWidth())
-        self.ed_usr.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.ed_usr.setFont(font)
-        self.ed_usr.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.ed_usr.setStyleSheet("")
-        self.ed_usr.setText("")
-        self.ed_usr.setMaxLength(12)
-        self.ed_usr.setAlignment(QtCore.Qt.AlignCenter)
-        self.ed_usr.setObjectName("ed_usr")
-        self.ed_pwd = QtWidgets.QLineEdit(Form)
-        self.ed_pwd.setGeometry(QtCore.QRect(160, 120, 200, 32))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.ed_pwd.sizePolicy().hasHeightForWidth())
-        self.ed_pwd.setSizePolicy(sizePolicy)
-        self.ed_pwd.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.ed_pwd.setFont(font)
-        self.ed_pwd.setStyleSheet("")
-        self.ed_pwd.setText("")
-        self.ed_pwd.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.ed_pwd.setAlignment(QtCore.Qt.AlignCenter)
-        self.ed_pwd.setObjectName("ed_pwd")
-        self.btn_login = QtWidgets.QPushButton(Form)
-        self.btn_login.setGeometry(QtCore.QRect(160, 270, 200, 30))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        self.horizontalLayout_5.addLayout(self.verticalLayout_3)
+        self.verticalLayout_10.addLayout(self.horizontalLayout_5)
+        self.verticalLayout_6.addLayout(self.verticalLayout_10)
+        self.horizontalLayout.addLayout(self.verticalLayout_6)
+        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem5)
+        self.layoutWidget3 = QtWidgets.QWidget(self.widget)
+        self.layoutWidget3.setGeometry(QtCore.QRect(0, 280, 521, 34))
+        self.layoutWidget3.setObjectName("layoutWidget3")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.layoutWidget3)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem6)
+        self.btn_login = QtWidgets.QPushButton(self.layoutWidget3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btn_login.sizePolicy().hasHeightForWidth())
         self.btn_login.setSizePolicy(sizePolicy)
+        self.btn_login.setMinimumSize(QtCore.QSize(200, 32))
         self.btn_login.setMaximumSize(QtCore.QSize(200, 32))
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei UI")
@@ -359,38 +455,18 @@ class Ui_Form(object):
         font.setBold(False)
         font.setWeight(50)
         self.btn_login.setFont(font)
-        self.btn_login.setStyleSheet("QPushButton{\n"
-"  background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0.871, y2:0.25, stop:0.144279 rgba(102, 176, 240, 255));\n"
-"  color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"      color: rgb(255, 255, 255);\n"
-"    background-color:rgb(48, 152, 241);\n"
-"}\n"
-"\n"
-"QPushButton:pressed\n"
-"{\n"
-"      color: rgb(255, 255, 255);\n"
-"    background-color:rgb(36, 146, 241);\n"
-"    padding-left:3px;\n"
-"    padding-top:3px;\n"
-"}")
+        self.btn_login.setStyleSheet("")
         self.btn_login.setCheckable(True)
         self.btn_login.setObjectName("btn_login")
-        self.widget = QtWidgets.QWidget(Form)
-        self.widget.setGeometry(QtCore.QRect(0, 0, 521, 401))
-        self.widget.setObjectName("widget")
-        self.widget.raise_()
-        self.layoutWidget.raise_()
-        self.layoutWidget.raise_()
-        self.ed_usr.raise_()
-        self.ed_pwd.raise_()
-        self.btn_login.raise_()
+        self.horizontalLayout_3.addWidget(self.btn_login)
+        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem7)
+        self.verticalLayout_5.addWidget(self.widget)
 
         self.retranslateUi(Form)
-        self.btn_login.clicked['bool'].connect(Form.close) # type: ignore
+        self.btn_login.clicked.connect(Form.close) # type: ignore
+        self.btn_close.clicked.connect(Form.close) # type: ignore
+        self.btn_minimum.clicked.connect(Form.showMinimized) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Form)
         Form.setTabOrder(self.btn_feedback, self.btn_givereward)
         Form.setTabOrder(self.btn_givereward, self.btn_upgrade)
@@ -398,6 +474,16 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "南工大自动认证"))
+        self.btn_feedback.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:9pt;\">联系与反馈，使用与说明，新增与功能</span></p></body></html>"))
+        self.btn_feedback.setWhatsThis(_translate("Form", "<html><head/><body><p>联系反馈，使用说明，新增功能</p></body></html>"))
+        self.btn_feedback.setText(_translate("Form", "反馈说明"))
+        self.btn_givereward.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:9pt;\">客官，觉得好用打个赏吧，CSDN关注点赞也可以哟，谢谢嘞</span></p></body></html>"))
+        self.btn_givereward.setText(_translate("Form", "打赏点赞"))
+        self.btn_upgrade.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:9pt;\">请到我的博客下获取最新版，为了软件的安全可靠</span></p></body></html>"))
+        self.btn_upgrade.setText(_translate("Form", "检查更新"))
+        self.label_3.setText(_translate("Form", "南工认证"))
+        self.ed_usr.setPlaceholderText(_translate("Form", " 学号"))
+        self.ed_pwd.setPlaceholderText(_translate("Form", " 密码"))
         self.ckbx_showlogin.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:10pt;\">自动认证时，调用cmd黑窗，展示认证过程信息</span></p></body></html>"))
         self.ckbx_showlogin.setStatusTip(_translate("Form", "0"))
         self.ckbx_showlogin.setText(_translate("Form", "显示过程"))
@@ -411,14 +497,5 @@ class Ui_Form(object):
         self.label.setText(_translate("Form", "重连"))
         self.spbox_cnct_time.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:10pt;\">定时自启进程，确保网络畅通，后台占用极小 (间隔时间：秒)。设置为 -1 时，关闭断网重连，不保留后台进程</span></p></body></html>"))
         self.spbox_cnct_time.setSuffix(_translate("Form", "s"))
-        self.btn_feedback.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:9pt;\">联系与反馈，使用与说明，新增与功能</span></p></body></html>"))
-        self.btn_feedback.setWhatsThis(_translate("Form", "<html><head/><body><p>联系反馈，使用说明，新增功能</p></body></html>"))
-        self.btn_feedback.setText(_translate("Form", "反馈说明"))
-        self.btn_givereward.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:9pt;\">客官，觉得好用打个赏吧，CSDN关注点赞也可以哟，谢谢嘞</span></p></body></html>"))
-        self.btn_givereward.setText(_translate("Form", "打赏点赞"))
-        self.btn_upgrade.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:9pt;\">请到我的博客下获取最新版，为了软件的安全可靠</span></p></body></html>"))
-        self.btn_upgrade.setText(_translate("Form", "检查更新"))
-        self.ed_usr.setPlaceholderText(_translate("Form", " 学号"))
-        self.ed_pwd.setPlaceholderText(_translate("Form", " 密码"))
         self.btn_login.setText(_translate("Form", "保存"))
 import resource_rc

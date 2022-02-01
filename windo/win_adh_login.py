@@ -1,4 +1,3 @@
-import sys
 from webbrowser import open_new_tab
 
 from service.constants import DOWN_URL, SOFT_ZIP
@@ -74,6 +73,7 @@ class WinUpdateDialog(QDialog):
 
 if __name__ == '__main__':
 
+    import sys
     app = QApplication(sys.argv)
     dialog = WinUpdateDialog()
     dialog.show()
