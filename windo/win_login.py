@@ -20,7 +20,8 @@ class WinLogin(DragWidget):
         super(WinLogin, self).__init__()
         self.ui = ui_login.Ui_Form()
         self.ui.setupUi(self)
-        
+        # from PyQt5.uic import loadUi
+        # self.ui = loadUi('pyqtui\\ui_login.ui')
         try: self.loadLoginData()
         except: pass
 

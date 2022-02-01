@@ -8,19 +8,20 @@ class DragWidget(QWidget):
     """ 左键拖拽窗口 """
     def __init__(self):
         super().__init__()
-        self.dragWidget()
         self.setAttribute(Qt.WA_DeleteOnClose, True)
+        
         self.setWindowOpacity(0.98)
         self.initCustomUI()
+        self.dragWidget()
 
     def dragWidget(self):
         self.setMouseTracking(True)
         self.move_flag = False #拖拽窗口
 
     def initCustomUI(self):
-        """添加窗口操作按钮"""
-        
+        """  """
         self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
     def mousePressEvent(self, a0):
         if a0.button() == Qt.LeftButton:
