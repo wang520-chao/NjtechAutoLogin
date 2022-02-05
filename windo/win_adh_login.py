@@ -69,7 +69,7 @@ class WinUpdateDialog(QDialog):
         self.ui.btn_yes.setText("确定")
         self.ui.btn_yes.setDefault(True) # FIXME
         self.ui.textbrow_info.setText(down_tips)
-        open_new_tab(F"{DOWN_URL}NjtechLogin-{self.version_name}.zip")
+        open_new_tab(F"{DOWN_URL}NjtechLogin-v{self.version_name}.zip")
 
 
 if __name__ == '__main__':
