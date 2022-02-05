@@ -1,21 +1,21 @@
 import json
+from requests import get
 from PyQt5.QtCore import QThread, pyqtSignal
 from constants import VERSION_CODE, VERSION_NAME
+from constants import USERAGENT
 
 
 def checkUpdate():
     """ 返回最新的版本名，版本号 """
-    version_data = [
-                { "versionApp": "1.2.2" , "versionCodeApp": 122},
-                { "versionWin": "6.2.9" , "versionCodeWin": 621},
-                { "version": "1.1.0" , "versionCode": 110},
-                { "version": "1.0.0" , "versionCode": 100}
-            ]
-    jsondata = json.dumps(version_data)
-    jsondata = json.loads(jsondata) #读取json文件流
-
     version_name = VERSION_NAME
     version_code = VERSION_CODE
+
+    update_url = "https://alpherk.github.io/NjtechAutoLogin/release/versions.json"
+    get_header = {'User-Agent': USERAGENT}
+    try:
+        get_json = get(url=update_url, headers=get_header).text
+        jsondata = json.loads(get_json)
+    except: pass
 
     for ver in jsondata:
         try:
@@ -23,6 +23,7 @@ def checkUpdate():
                 version_code = ver['versionCodeWin']
                 version_name = ver['versionWin']
         except: pass
+
     if (version_code == VERSION_CODE):
         """ 当前为最新版 """
         version_code = 0
@@ -38,8 +39,10 @@ class BackThread(QThread):
 
         version_name, version_code = checkUpdate()
         if (version_code == 0):
-            check_tip = f"已更新至最新版本：{version_name}"
-            self.update_info.emit(check_tip, "确定")
+            self.update_info.emit(version_name, "确定")
         else: 
-            check_tip = f"最新版本为：{version_name}，是否自动跳转至浏览器下载？"
-            self.update_info.emit(check_tip, "下载")
+            self.update_info.emit(version_name, "下载")
+
+if __name__ == '__main__':
+
+    print(checkUpdate())

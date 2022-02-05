@@ -6,23 +6,23 @@ class DragWidget(QWidget):
     """ 左键拖拽窗口 """
     def __init__(self):
         super().__init__()
-        self.setAttribute(Qt.WA_DeleteOnClose, True)
         
-        self.setWindowOpacity(0.99)
         self.initCustomUI()
         self.dragWidget()
+
+    def initCustomUI(self):
+        """ 初始化界面 """
+        wdo_flag = Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint
+        self.setWindowFlags(wdo_flag) #置顶窗口
+        self.setAttribute(Qt.WA_DeleteOnClose, True)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        # self.setWindowOpacity(0.99)
 
     def dragWidget(self):
         self.setMouseTracking(True)
         self.move_flag = False #拖拽窗口
 
-    def initCustomUI(self):
-        """  """
-        self.setWindowFlags(Qt.FramelessWindowHint)
-        self.setAttribute(Qt.WA_TranslucentBackground)
-        self.setStyleSheet("background-color:red;")
-
-    def mousePressEvent(self, a0):
+    def mousePressEvent(  self, a0):
         if a0.button() == Qt.LeftButton:
             self.move_flag = True
             self.mos_x = a0.globalX()
@@ -40,7 +40,6 @@ class DragWidget(QWidget):
     
     def mouseReleaseEvent(self, a0):
         self.move_flag = False
-
 
 
 if __name__ == '__main__':

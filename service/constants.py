@@ -26,7 +26,7 @@ VERSION_CODE  = 620
 VERSION_NAME  = "6.2.0"
 AUTOLOGIN_EXE = "autologin.exe"
 SOFT_ZIP  = "NjtechAutoLogin.zip"
-DOWN_URL  = "http://download.redis.io/releases/redis-5.0.5.tar.gz"
+DOWN_URL  = "https://gitee.com/Alpherk/NjtechAutoLogin/raw/WebPage/release/"
 CHECK_URL = ""
 USERAGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
              "AppleWebKit/537.36 (KHTML, like Gecko) "

@@ -9,6 +9,9 @@ if __name__ == '__main__':
     QCoreApplication.setAttribute(Qt.AA_EnableHighDpiScaling) # 缩放适应高分屏
 
     app = QApplication(sys.argv)
+
     WinLoginControl.loginWin = WinLogin()
+
     WinLoginControl.loginWin.show()
+    
     sys.exit(app.exec_())

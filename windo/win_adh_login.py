@@ -17,8 +17,8 @@ class WinFeedback(QMainWindow):
         super(WinFeedback, self).__init__()
         self.ui = ui_feedback.Ui_MainWindow()
         self.ui.setupUi(self)
-
         self.ui.btn_csdn.clicked.connect(utils.jumpMyCSDN)
+        self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
 
 class WinGiveReward(QMainWindow):
@@ -28,9 +28,8 @@ class WinGiveReward(QMainWindow):
         super(WinGiveReward, self).__init__()
         self.ui = ui_reward.Ui_MainWindow()
         self.ui.setupUi(self)
-
         self.ui.btn_csdn.clicked.connect(utils.jumpMyCSDN)
-
+        self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
 class WinUpdateDialog(QDialog):
     """ 检查更新界面 """
@@ -39,8 +38,7 @@ class WinUpdateDialog(QDialog):
         super(WinUpdateDialog, self).__init__()
         self.ui = ui_dialog.Ui_Dialog()
         self.ui.setupUi(self) 
-        # self.setWindowState(Qt.WindowActive)
-        self.setWindowFlags(Qt.WindowStaysOnTopHint) #置顶窗口
+        self.setWindowFlags(Qt.WindowStaysOnTopHint)
         self.checkUpdate()
 
     def checkUpdate(self):
@@ -50,25 +48,28 @@ class WinUpdateDialog(QDialog):
         self.backend.update_info.connect(self.updateDisplay)
         self.backend.start()
     
-    def updateDisplay(self, info, yes_btn):
+    def updateDisplay(self, version_name, yes_btn):
         """更新界面信息"""
-        self.ui.textbrow_info.setText(info)
-        self.ui.btn_yes.setText(yes_btn)
         if   yes_btn == "确定":
+            check_tip = f"已更新至最新版本：{version_name}"
             self.ui.btn_yes.clicked.connect(self.close)
         elif yes_btn == "下载":
-            self.ui.btn_yes.setDefault(True) # FIXME
+            check_tip = f"最新版本为：{version_name}，是否自动跳转至浏览器下载？"
             self.ui.btn_yes.clicked.connect(self.downSoft)
+            self.ui.btn_yes.setDefault(True) # FIXME
+        self.version_name = version_name
+        self.ui.btn_yes.setText(yes_btn)
+        self.ui.textbrow_info.setText(check_tip)
 
     def downSoft(self):
         """跳转下载软件"""
-        down_tips = F"正在下载最新版~\n请前往下载中心，找到 {SOFT_ZIP} 解压食用"
-        self.ui.textbrow_info.setText(down_tips)
+        down_tips = F"正在下载最新版~\n请前往下载中心，找到 {self.version_name} 解压食用"
         self.ui.btn_yes.clicked.connect(self.close)
         self.ui.btn_yes.clicked.disconnect(self.downSoft)
         self.ui.btn_yes.setText("确定")
         self.ui.btn_yes.setDefault(True) # FIXME
-        open_new_tab(DOWN_URL)
+        self.ui.textbrow_info.setText(down_tips)
+        open_new_tab(F"{DOWN_URL}NjtechLogin{self.version_name}.zip")
 
 
 if __name__ == '__main__':
