@@ -27,7 +27,11 @@
 更详细的说明请前往各分支查看
 
 
+## 开发记录
 
+### BootStrap 框架使用
+- 使用框架时尽量使用框架样式，少些CSS，保持风格统一
+- 行内样式、行内块、块级样式
 
 
 [1]: https://alpherk.github.io/NjtechAutoLogin/
