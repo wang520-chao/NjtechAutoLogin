@@ -1,8 +1,8 @@
 ``` —————————————————————— 软件打包命令 ——————————————————————
 
-pyinstaller NjtechAutologin.py -w --clean -i UI\resource\njtech-icon\NJtech02.ico --log-level WARN --hidden-import PyQt5.sip --noconfirm -F
+pyinstaller NjtechAutologin.py -w --clean -i pyqtui\icons\NJtech02.ico --log-level WARN --hidden-import PyQt5.sip --noconfirm -p service -p windo -p windo\ui_init
 
-pyinstaller autologin.py -w --clean -i UI\resource\njtech-icon\autologin.ico --log-level WARN --noconfirm
+pyinstaller autologin.py -w --clean -i pyqtui\icons\autologin.ico --log-level WARN --noconfirm
 
 pyi-makespec -w xxx.py
 

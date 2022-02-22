@@ -1,5 +1,7 @@
-config
 dist
+build
+config
 pyqtui
+*.spec
 
 **/__pycache__/**
