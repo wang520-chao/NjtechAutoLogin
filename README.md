@@ -5,22 +5,19 @@
 
 > [官网下载地址][1]&emsp;&emsp;[CSDN项目地址][2]&emsp;&emsp;[联系及反馈][3]  
 
-![官网主页示图](https://github.com/AlpHerk/NjtechAutoLogin/blob/docs/image/homepage.jpg)
+![官网主页示图](https://github.com/AlpHerk/NjtechAutoLogin/blob/Windows/image/homepage.jpg)
 
 
-目前本项目共有以下3个源码分支:  
+目前本项目共有以下2个源码分支:  
 
-- WebPage: 用于托管本项目的HTML网页。
-    > 本分支 release 中即为打包好的所有软件  
-    > version.json 为版本信息，用于检查更新  
+- Android: 基于 Kotlin 开发的安卓App
+    > 安卓App，也适用于鸿蒙系统  
+    > 强烈推荐平板使用 ！！
 
 - Windows: 基于 Python 开发的PC客户端。
     > 有python环境可直接运行 autologin.py  
     > exe版有断网重连、开机自启等功能  
 
-- Android: 基于 Kotlin 开发的安卓App
-    > 安卓App，也适用于鸿蒙系统  
-    > 强烈推荐平板使用 ！！
 
 
 
