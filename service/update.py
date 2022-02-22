@@ -12,17 +12,17 @@ def checkUpdate():
 
     update_url = "https://alpherk.github.io/NjtechAutoLogin/release/versions.json"
     get_header = {'User-Agent': USERAGENT}
+    
     try:
         get_json = get(url=update_url, headers=get_header).text
         jsondata = json.loads(get_json)
-    except: pass
 
-    for ver in jsondata:
-        try:
+        for ver in jsondata:
             if (version_code < ver['versionCodeWin']):
                 version_code = ver['versionCodeWin']
                 version_name = ver['versionWin']
-        except: pass
+
+    except: pass
 
     if (version_code == VERSION_CODE):
         """ 当前为最新版 """
@@ -34,14 +34,15 @@ def checkUpdate():
 class BackThread(QThread):
     """ 后台检查版本更新 """
     update_info = pyqtSignal(str, str)
-    
+
     def run(self):
 
         version_name, version_code = checkUpdate()
         if (version_code == 0):
             self.update_info.emit(version_name, "确定")
-        else: 
+        else:
             self.update_info.emit(version_name, "下载")
+
 
 if __name__ == '__main__':
 
