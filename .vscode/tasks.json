@@ -4,21 +4,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "转换 pyUI",
+            "label": "转换 PyUI",
             "type": "shell",
             "command": "pyuic5 ${file} -o ${workspaceFolder}\\windo\\ui_init\\${fileBasenameNoExtension}.py"
         },
 
         {
-            "label": "调试 PyUI",
-            "type": "shell",
-            "command": "pyuic5 ${file} -o ${workspaceFolder}\\windo\\ui_init\\ex_${fileBasenameNoExtension}.py -x"
-        },
-
-        {
-            "label": "转换 pyRC",
+            "label": "转换 PyRC",
             "type": "shell",
             "command": "pyrcc5 ${file} -o ${workspaceFolder}\\windo\\ui_init\\${fileBasenameNoExtension}_rc.py",
+            "problemMatcher": []
         }
     ]
 }

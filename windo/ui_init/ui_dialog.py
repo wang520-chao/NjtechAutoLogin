@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\Aerk\Documents\PrjcDev\NjtechAutoLogin-Dev\NjtechAutoLogin-Win\pyqtui\ui_dialog.ui'
+# Form implementation generated from reading ui file 'd:\Aerk\Documents\PrjcDev\NjtechAutoLogin-Dev\NjtechLogin-Win\pyqtui\ui_dialog.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -15,9 +15,9 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.ApplicationModal)
-        Dialog.resize(700, 250)
-        Dialog.setMinimumSize(QtCore.QSize(700, 250))
-        Dialog.setMaximumSize(QtCore.QSize(700, 250))
+        Dialog.resize(470, 210)
+        Dialog.setMinimumSize(QtCore.QSize(470, 210))
+        Dialog.setMaximumSize(QtCore.QSize(470, 210))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/应用图标/icons/NJtech02.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
@@ -40,7 +40,7 @@ class Ui_Dialog(object):
 "    padding-top:3px;\n"
 "}")
         self.widget = QtWidgets.QWidget(Dialog)
-        self.widget.setGeometry(QtCore.QRect(0, 194, 700, 56))
+        self.widget.setGeometry(QtCore.QRect(0, 150, 471, 61))
         self.widget.setObjectName("widget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -90,10 +90,8 @@ class Ui_Dialog(object):
         self.horizontalLayout.setStretch(3, 6)
         self.horizontalLayout.setStretch(4, 1)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem3)
         self.layoutWidget = QtWidgets.QWidget(Dialog)
-        self.layoutWidget.setGeometry(QtCore.QRect(0, 0, 701, 202))
+        self.layoutWidget.setGeometry(QtCore.QRect(0, 0, 471, 151))
         self.layoutWidget.setObjectName("layoutWidget")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -118,7 +116,6 @@ class Ui_Dialog(object):
         self.textbrow_info.setObjectName("textbrow_info")
         self.horizontalLayout_2.addWidget(self.textbrow_info)
         self.horizontalLayout_2.setStretch(0, 2)
-        self.horizontalLayout_2.setStretch(1, 5)
         self.layoutWidget.raise_()
         self.widget.raise_()
 
