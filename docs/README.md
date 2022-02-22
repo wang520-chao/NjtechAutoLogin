@@ -2,7 +2,7 @@
 
 pyinstaller NjtechAutologin.py -w --clean -i pyqtui\icons\NJtech02.ico --log-level WARN --hidden-import PyQt5.sip --noconfirm -p service -p windo -p windo\ui_init
 
-pyinstaller autologin.py -w --clean -i pyqtui\icons\autologin.ico --log-level WARN --noconfirm
+pyinstaller autologin.py -w --clean -i pyqtui\icons\autologin.ico --log-level WARN --noconfirm -p service
 
 pyi-makespec -w xxx.py
 
