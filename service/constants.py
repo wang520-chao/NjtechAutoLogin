@@ -22,12 +22,12 @@ LOGIN_DATA_6 = "show login work info"
 
 
 ### 认证程序的相关信息
-VERSION_CODE  = 620
+VERSION_CODE  = 610
 VERSION_NAME  = "6.2.0"
 AUTOLOGIN_EXE = "autologin.exe"
 SOFT_ZIP  = "NjtechAutoLogin.zip"
 
-DOWN_URL  = "https://gitee.com/Alpherk/NjtechAutoLogin/raw/WebPage/release/"
+DOWN_URL  = "https://alpherk.github.io/NjtechAutoLogin/release/"
 CHECK_URL = "https://alpherk.github.io/NjtechAutoLogin/release/versionLatest.json"
 
 USERAGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
