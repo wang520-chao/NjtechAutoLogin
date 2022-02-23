@@ -15,13 +15,14 @@ def checkUpdate():
     try:
         get_json = get(url=CHECK_URL, headers=get_header).text
         jsondata = json.loads(get_json)
-        print(jsondata["windows"]["versionCode"])
-        for ver in jsondata:
-            try:
-                if (version_code < ver['versionCodeWin']):
-                    version_code = ver['versionCodeWin']
-                    version_name = ver['versionWin']
-            except: pass
+        
+        curVerCode = jsondata["windows"]["versionCode"]
+        curVerName = jsondata["windows"]["versionName"]
+
+        if (version_code < curVerCode):
+            version_code = curVerCode
+            version_name = curVerName
+
     except: pass
 
     if (version_code == VERSION_CODE):

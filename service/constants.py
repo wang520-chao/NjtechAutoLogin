@@ -28,7 +28,7 @@ AUTOLOGIN_EXE = "autologin.exe"
 SOFT_ZIP  = "NjtechAutoLogin.zip"
 
 DOWN_URL  = "https://gitee.com/Alpherk/NjtechAutoLogin/raw/WebPage/release/"
-CHECK_URL = "https://alpherk.github.io/NjtechAutoLogin/release/versions.json"
+CHECK_URL = "https://alpherk.github.io/NjtechAutoLogin/release/versionLatest.json"
 
 USERAGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
              "AppleWebKit/537.36 (KHTML, like Gecko) "

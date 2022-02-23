@@ -2,8 +2,8 @@
     "android": {
         "appName": "南工认证",
         "description": "提供安卓端一键认证服务",
-        "versionName": "1.2.3",
-        "versionCode": 123
+        "versionName": "1.2.5",
+        "versionCode": 125
     },
     "windows": {
         "appName": "NjtechAutoLogin",

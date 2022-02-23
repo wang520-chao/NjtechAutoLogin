@@ -1,9 +1,0 @@
-[
-    { "versionApp": "1.2.2" , "versionCodeApp": 122},
-    { "versionApp": "1.2.1" , "versionCodeApp": 121},
-    { "versionApp": "1.2.0" , "versionCodeApp": 120},
-
-    { "versionWin": "6.2.0" , "versionCodeWin": 620},
-    { "versionWin": "6.1.5" , "versionCodeWin": 615},
-    { "versionWin": "6.1.0" , "versionCodeWin": 610}
-]
