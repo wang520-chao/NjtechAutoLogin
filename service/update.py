@@ -15,6 +15,7 @@ def checkUpdate():
     try:
         get_json = get(url=CHECK_URL, headers=get_header).text
         jsondata = json.loads(get_json)
+        print(jsondata["windows"]["versionCode"])
         for ver in jsondata:
             try:
                 if (version_code < ver['versionCodeWin']):
