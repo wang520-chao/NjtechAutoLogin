@@ -26,8 +26,10 @@ VERSION_CODE  = 620
 VERSION_NAME  = "6.2.0"
 AUTOLOGIN_EXE = "autologin.exe"
 SOFT_ZIP  = "NjtechAutoLogin.zip"
+
 DOWN_URL  = "https://gitee.com/Alpherk/NjtechAutoLogin/raw/WebPage/release/"
-CHECK_URL = ""
+CHECK_URL = "https://alpherk.github.io/NjtechAutoLogin/release/versions.json"
+
 USERAGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
              "AppleWebKit/537.36 (KHTML, like Gecko) "
              "Chrome/91.0.4472.77 Safari/537.36 Edg/91.0.864.41")

@@ -2,7 +2,7 @@ import json
 from requests import get
 from PyQt5.QtCore import QThread, pyqtSignal
 from constants import VERSION_CODE, VERSION_NAME
-from constants import USERAGENT
+from constants import USERAGENT, CHECK_URL
 
 
 def checkUpdate():
@@ -10,18 +10,17 @@ def checkUpdate():
     version_name = VERSION_NAME
     version_code = VERSION_CODE
 
-    update_url = "https://alpherk.github.io/NjtechAutoLogin/release/versions.json"
     get_header = {'User-Agent': USERAGENT}
     
     try:
-        get_json = get(url=update_url, headers=get_header).text
+        get_json = get(url=CHECK_URL, headers=get_header).text
         jsondata = json.loads(get_json)
-
         for ver in jsondata:
-            if (version_code < ver['versionCodeWin']):
-                version_code = ver['versionCodeWin']
-                version_name = ver['versionWin']
-
+            try:
+                if (version_code < ver['versionCodeWin']):
+                    version_code = ver['versionCodeWin']
+                    version_name = ver['versionWin']
+            except: pass
     except: pass
 
     if (version_code == VERSION_CODE):
