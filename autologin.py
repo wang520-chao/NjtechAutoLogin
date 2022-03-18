@@ -32,23 +32,22 @@ class AutoLogin:
     def requestLogin(self):
 
         ############ 发送get请求, 获取post所需数据 ##########
-        url_host  = "https://u.njtech.edu.cn/cas/login"
+        url_hosts = "https://u.njtech.edu.cn/cas/login"
         url_query =("?service=https://u.njtech.edu.cn/oauth2/authorize"
                     "?client_id=Oe7wtp9CAMW0FVygUasZ&response_type=code"
                     "&state=njtech&s=f682b396da8eb53db80bb072f5745232" )
+        get_urls = url_hosts + url_query
+        get_head = {'User-Agent': USERAGENT}
+        get_info = get(url=get_urls, headers=get_head).text
 
-        get_url = url_host + url_query
-        get_header = {'User-Agent': USERAGENT}
-        njtech  = get(url=get_url, headers=get_header).text
-
-        lt      = search('lt\" value=\"(.*?)\"',        njtech).groups()[0]
-        exe     = search('execution\" value=\"(.*?)\"', njtech).groups()[0]
-        js      = search('jsessionid=(.*?)\">',         njtech).groups()[0]
+        lt      = search('lt\" value=\"(.*?)\"',        get_info).groups()[0]
+        exe     = search('execution\" value=\"(.*?)\"', get_info).groups()[0]
+        js      = search('jsessionid=(.*?)\">',         get_info).groups()[0]
         cookies = F"JSESSIONID={js}; insert_cookie=97324480"
 
         ############# 发送post请求, 完成认证 ################
-        post_url = F"{url_host};jsessionid={js}{url_query}"
-        post_header = {
+        post_urls = F"{url_hosts};jsessionid={js}{url_query}"
+        post_head = {
             "Cookie":               cookies,
             "User-Agent":         USERAGENT}
         post_data = {
@@ -60,7 +59,7 @@ class AutoLogin:
             "execution":                exe,
             "_eventId":            "submit",
             "login":                 "登录"}
-        post(url=post_url, headers=post_header, data=post_data)
+        post(url=post_urls, headers=post_head, data=post_data)
 
     def toConnect(self):
         threads = []

@@ -1,6 +1,6 @@
 import json
 from requests import get
-from PyQt5.QtCore import QThread, pyqtSignal
+from PyQt6.QtCore import QThread, pyqtSignal
 from constants import VERSION_CODE, VERSION_NAME
 from constants import USERAGENT, CHECK_URL
 

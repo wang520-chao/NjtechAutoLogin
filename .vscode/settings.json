@@ -18,6 +18,7 @@
         "pwrboot",
         "pyinstaller",
         "pyside",
+        "Referer",
         "showlogin",
         "spbox",
         "specpath",
@@ -25,5 +26,6 @@
         "USERINFO",
         "Wdos",
         "WORKINFO"
-    ]
+    ],
+    "python.formatting.provider": "black"
 }

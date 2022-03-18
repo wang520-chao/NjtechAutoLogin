@@ -34,7 +34,7 @@ USERAGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
              "AppleWebKit/537.36 (KHTML, like Gecko) "
              "Chrome/91.0.4472.77 Safari/537.36 Edg/91.0.864.41")
 
-
+             
 #### 本项目的CSDN博客地址，有详细介绍与说明
 CSDN_PROJECT_URL = "https://blog.csdn.net/Alpherkin/article/details/115599094"
 
