@@ -22,20 +22,17 @@ LOGIN_DATA_6 = "show login work info"
 
 
 ### 认证程序的相关信息
-VERSION_CODE  = 610
-VERSION_NAME  = "6.2.0"
+VERSION_CODE  = 625
+VERSION_NAME  = "6.2.5"
 AUTOLOGIN_EXE = "autologin.exe"
 SOFT_ZIP  = "NjtechAutoLogin.zip"
 
 DOWN_URL  = "https://alpherk.github.io/NjtechAutoLogin/release/"
 CHECK_URL = "https://alpherk.github.io/NjtechAutoLogin/release/versionLatest.json"
 
-USERAGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-             "AppleWebKit/537.36 (KHTML, like Gecko) "
-             "Chrome/91.0.4472.77 Safari/537.36 Edg/91.0.864.41")
-
+USERAGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36 Edg/91.0.864.41"
+HEADERS = {'User-Agent': USERAGENT}
+LOGIN_URL = "https://u.njtech.edu.cn/cas/login?service=https://u.njtech.edu.cn/oauth2/authorize?client_id=Oe7wtp9CAMW0FVygUasZ&response_type=code&state=njtech&s=f682b396da8eb53db80bb072f5745232"
              
 #### 本项目的CSDN博客地址，有详细介绍与说明
 CSDN_PROJECT_URL = "https://blog.csdn.net/Alpherkin/article/details/115599094"
-
-
